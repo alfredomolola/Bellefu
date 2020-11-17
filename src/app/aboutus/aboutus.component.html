@@ -1,1 +1,23 @@
-<p>aboutus works!</p>
+<div class="user-wrapper">
+
+  <table>
+      <thead>
+          <th>Name</th>
+          <th>Username</th>
+          <th>Email</th>
+          <th>Street Address</th>
+          <th>City</th>
+          <th>Zipcode</th>
+      </thead>
+      <tbody>
+          <tr *ngFor="let user of users">
+              <td>{{user.name}}</td>
+              <td>{{user.username}}</td>
+              <td>{{user.email}}</td>
+              <td>{{user.address.street}}</td>
+              <td>{{user.address.city}}</td>
+              <td>{{user.address.zipcode}}</td>
+          </tr>
+      </tbody>
+  </table>
+</div>

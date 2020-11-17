@@ -1,1 +1,139 @@
-<p>contactus works!</p>
+<!-- <div class="form-wrapper">
+  <form class="form">
+    <div class="form-group">
+      <label for="name" class="form-label"> Name</label>
+
+      <input
+        type="text"
+        id="name"
+        class="form-control"
+        name="name"
+        [(ngModel)]="name"
+      />
+    </div>
+    <div>{{name}}</div>
+
+    <div class="form-group">
+      <label for="name" class="form-label"> e-mail</label>
+      <input type="text"
+      id="email"
+      class="form-control"
+      name="email"
+      [(ngModel)]="email"
+
+      />
+    </div>
+    <div>{{email}}</div>
+
+    <div class="form-group">
+      <label for="message" class="form-label"> Message</label>
+      <textarea
+        name=""
+        id="message"
+        cols="10"
+        rows="5"
+        class="form-control"
+        name="message"
+        [(ngModel)]="message"
+      ></textarea>
+    </div>
+    <div>{{message}}</div>
+
+    <button class="input-btn"(click)="submit()">Submit</button>
+  </form>
+  <div class="contact-container" *ngIf= "contactInfo.length > 0" >
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Message</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of contactInfo;index as i">
+          <td>{{item.name}}</td>
+          <td>{{item.email}}</td>
+          <td>{{item.message}}</td>
+          <td>
+            <a (click)="edit(item)">Edit</a>
+          </td>
+          <td>
+            <button class="input-btn"(click)="delete(i)">delete</button>
+
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>-->
+
+
+ <form class="form" [formGroup]="contactForm">
+    <div class="form-group">
+      <label for="name" class="form-label"> Name</label>
+
+      <input
+        type="text"
+        id="name"
+        class="form-control"
+       formControlName="id"
+
+      />
+    </div>
+    <div>{{id}}</div>
+
+    <div class="form-group">
+      <label for="name" class="form-label"> e-mail</label>
+      <input type="text"
+      id="email"
+      class="form-control"
+      name="email"
+      formControlName="title"
+
+      />
+    </div>
+    <div>{{title}}</div>
+
+    <div class="form-group">
+      <label for="message" class="form-label"> Message</label>
+      <textarea
+      formControlName="body"
+        id="message"
+        cols="10"
+        rows="5"
+        class="form-control"
+      ></textarea>
+    </div>
+    <div>{{body}}</div>
+
+    <button class="input-btn"(click)="submit(contactForm)">Submit</button>
+  </form>
+  <div class="contact-container" *ngIf= "contactInfo.length > 0" >
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Message</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of contactInfo;index as i">
+          <td>{{item.id}}</td>
+          <td>{{item.title}}</td>
+          <td>{{item.body}}</td>
+          <td>
+            <a (click)="edit(item)">Edit</a>
+          </td>
+          <td>
+            <button class="input-btn"(click)="delete(i)">delete</button>
+
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+

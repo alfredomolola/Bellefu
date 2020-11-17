@@ -11,6 +11,8 @@ import { AboutusComponent } from './aboutus/aboutus.component';
 import { ContactusComponent } from './contactus/contactus.component';
 import { OurservicesComponent } from './ourservices/ourservices.component';
 import { OurproductsComponent } from './ourproducts/ourproducts.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import{ HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,7 @@ import { OurproductsComponent } from './ourproducts/ourproducts.component';
     FooterComponent,
     MenuComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule],
+  imports: [BrowserModule, AppRoutingModule, FormsModule, ReactiveFormsModule, HttpClientModule],
   providers: [],
   bootstrap: [AppComponent],
 })

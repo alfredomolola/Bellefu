@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "bellefu"
+    }
+  },
+  "defaultProject": "bellefu",
+  "cli": {
+    "analytics": "9b0b4921-462f-49de-bf2d-2851eea101c4"
+  }
 }

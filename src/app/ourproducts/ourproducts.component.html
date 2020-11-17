@@ -1,1 +1,16 @@
-<p>ourproducts works!</p>
+<div class="product-wrapper">
+  <div *ngFor="let post of posts">
+    <div>
+      <span>SN</span>
+      <span>{{post.id}}</span>
+    </div>
+    <div>
+      <span>Title:</span>
+      <span>{{post.title}}</span>
+    </div>
+    <div>
+      <span>Body:</span>
+      <span>{{post.body}}</span>
+    </div>
+
+</div>
